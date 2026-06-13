@@ -1,0 +1,220 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explore Beyond Earth</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Star layers -->
+  <div class="stars"></div>
+  <div class="stars2"></div>
+  <div class="stars3"></div>
+
+  <!-- Background Video (works when your .mp4 is in same folder) -->
+  <video autoplay muted loop id="bg-video">
+    <source src="Project footage.mp4" type="video/mp4">
+  </video>
+  <div class="overlay"></div>
+
+  <!-- ── LAUNCH MODAL (CSS :target trick) ─────────────────────── -->
+  <div class="modal-overlay" id="launch-modal">
+    <div class="modal">
+      <a class="modal-close" href="#">✕</a>
+      <span class="modal-icon">🚀</span>
+      <h3>MISSION INITIATED</h3>
+      <p>All systems nominal. Crew is ready. Preparing for wormhole transit in T‑minus:</p>
+
+      <div class="countdown-grid">
+        <div class="count-box"><span class="count-num">04</span><span class="count-label">Days</span></div>
+        <div class="count-box"><span class="count-num">12</span><span class="count-label">Hours</span></div>
+        <div class="count-box"><span class="count-num">33</span><span class="count-label">Mins</span></div>
+        <div class="count-box"><span class="count-num">07</span><span class="count-label">Secs</span></div>
+      </div>
+
+      <a href="#mission" class="modal-confirm-btn">View Mission Briefing →</a>
+    </div>
+  </div>
+
+  <!-- ── NAVBAR ───────────────────────────────────────────────── -->
+  <nav>
+    <div class="logo">INTERSTELLAR</div>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#mission">Mission</a></li>
+      <li><a href="https://www.nasa.gov" target="_blank">NASA</a></li>
+      <li><a href="https://en.wikipedia.org/wiki/Interstellar_(film)" target="_blank">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- ── HERO ─────────────────────────────────────────────────── -->
+  <section class="hero">
+    <div class="hero-eyebrow">▸ &nbsp; Year 2157 · Deep Space Program</div>
+    <h1>Explore<br>Beyond Earth</h1>
+    <p>
+      Humanity's future lies among the stars. Join the expedition to
+      traverse the wormhole and find our next home in the cosmos.
+    </p>
+    <div class="hero-btns">
+      <!-- Launch button opens modal via :target -->
+      <a href="#launch-modal" class="launch-btn">
+        <span class="rocket">🚀</span> Launch Mission
+      </a>
+      <a href="#mission" class="scroll-btn">
+        Mission Briefing ↓
+      </a>
+    </div>
+  </section>
+
+  <!-- ── MISSION SECTION ────────────────────────────────────────── -->
+  <section id="mission" class="mission">
+
+    <div class="section-eyebrow">▸ &nbsp; Priority Alpha</div>
+    <h2>Mission Briefing</h2>
+    <p>
+      Humanity faces an uncertain future on Earth. Our mission is to explore
+      distant worlds and discover a new home beyond the stars — before time runs out.
+    </p>
+
+    <!-- ── CSS-ONLY TABS ────────────────────────────────────── -->
+    <input type="radio" name="tabs" id="tab1" class="tab-inputs" checked />
+    <input type="radio" name="tabs" id="tab2" class="tab-inputs" />
+    <input type="radio" name="tabs" id="tab3" class="tab-inputs" />
+
+    <div class="tabs">
+      <label class="tab-label label1" for="tab1">Objective</label>
+      <label class="tab-label label2" for="tab2">Systems</label>
+      <label class="tab-label label3" for="tab3">Timeline</label>
+    </div>
+
+    <div class="tab-content-wrap">
+      <div class="tab-panel panel1">
+        <h4>Primary Objective</h4>
+        <p>
+          Traverse the wormhole near Saturn and evaluate three candidate planets in the
+          Gargantua star system. Collect atmospheric, geological, and biological data.
+          Identify one viable candidate for humanity's second home. Return with findings
+          or transmit data via relay beacon before orbital decay.
+        </p>
+      </div>
+      <div class="tab-panel panel2">
+        <h4>Ship Systems</h4>
+        <ul>
+          <li>Endurance-class vessel — 12 cryosleep pods, 2 AI cores</li>
+          <li>Ranger shuttles × 2 for planetary descent</li>
+          <li>Nuclear thermal propulsion — Δv: 340 km/s</li>
+          <li>Gravitational anomaly scanner (TARS-IV)</li>
+          <li>Quantum relay communications array</li>
+        </ul>
+      </div>
+      <div class="tab-panel panel3">
+        <h4>Mission Timeline</h4>
+        <ul>
+          <li>Year 1 — Transit to Saturn wormhole entry point</li>
+          <li>Year 2 — Wormhole transit · Approach Gargantua</li>
+          <li>Year 3–5 — Planet evaluation: Miller, Edmunds, Mann</li>
+          <li>Year 6 — Data transmission / Return burn</li>
+          <li>Year 10 — Earth arrival (accounting for time dilation)</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ── CREW CARDS ───────────────────────────────────────── -->
+    <div class="crew-section">
+      <h3>Mission Crew</h3>
+      <div class="crew-grid">
+
+        <!-- Card: click to flip (CSS checkbox trick) -->
+        <div class="card-flip">
+          <input type="checkbox" id="c1" />
+          <label class="card-inner" for="c1">
+            <div class="card-face">
+              <div class="crew-avatar">👨‍🚀</div>
+              <div class="crew-name">Cpt. J. Cooper</div>
+              <div class="crew-role">Commander</div>
+              <div class="flip-hint">Click to read →</div>
+            </div>
+            <div class="card-back">
+              <p class="crew-bio">Former NASA test pilot. Expert in gravitational navigation. Volunteered for the mission to secure a future for his children on a dying Earth.</p>
+            </div>
+          </label>
+        </div>
+
+        <div class="card-flip">
+          <input type="checkbox" id="c2" />
+          <label class="card-inner" for="c2">
+            <div class="card-face">
+              <div class="crew-avatar">👩‍🔬</div>
+              <div class="crew-name">Dr. A. Brand</div>
+              <div class="crew-role">Astrophysicist</div>
+              <div class="flip-hint">Click to read →</div>
+            </div>
+            <div class="card-back">
+              <p class="crew-bio">Daughter of Prof. Brand. Specialist in theoretical relativity and black hole mechanics. Drove the wormhole transit calculations.</p>
+            </div>
+          </label>
+        </div>
+
+        <div class="card-flip">
+          <input type="checkbox" id="c3" />
+          <label class="card-inner" for="c3">
+            <div class="card-face">
+              <div class="crew-avatar">🤖</div>
+              <div class="crew-name">TARS</div>
+              <div class="crew-role">AI · Field Unit</div>
+              <div class="flip-hint">Click to read →</div>
+            </div>
+            <div class="card-back">
+              <p class="crew-bio">Military-class AI. Honesty: 90%. Humor: 75%. Capable of independent scientific analysis and autonomous planetary exploration.</p>
+            </div>
+          </label>
+        </div>
+
+        <div class="card-flip">
+          <input type="checkbox" id="c4" />
+          <label class="card-inner" for="c4">
+            <div class="card-face">
+              <div class="crew-avatar">👨‍⚕️</div>
+              <div class="crew-name">Dr. R. Mann</div>
+              <div class="crew-role">Biologist</div>
+              <div class="flip-hint">Click to read →</div>
+            </div>
+            <div class="card-back">
+              <p class="crew-bio">Pioneer surveyor of Mann's Planet. First to confirm potential biosphere. Went into cryosleep awaiting rescue for seven years.</p>
+            </div>
+          </label>
+        </div>
+
+      </div>
+    </div><!-- /crew -->
+
+    <!-- ── EXTERNAL LINKS ───────────────────────────────────── -->
+    <div class="links">
+      <a href="https://www.nasa.gov" target="_blank">
+        Visit NASA <span class="arr">→</span>
+      </a>
+      <a href="https://en.wikipedia.org/wiki/Interstellar_(film)" target="_blank">
+        About Interstellar <span class="arr">→</span>
+      </a>
+      <a href="https://science.nasa.gov/exoplanets/" target="_blank">
+        Exoplanet Database <span class="arr">→</span>
+      </a>
+    </div>
+
+  </section>
+
+  <!-- ── FOOTER ────────────────────────────────────────────────── -->
+  <footer>
+    <span class="logo-sm">INTERSTELLAR</span>
+    <span>An HTML &amp; CSS project · Beyond the stars</span>
+    <span>© 2157 Deep Space Program</span>
+  </footer>
+
+  <!-- ── SCROLL TO TOP ─────────────────────────────────────────── -->
+  <a href="#" class="scroll-top" title="Back to top">↑</a>
+
+</body>
+</html>
